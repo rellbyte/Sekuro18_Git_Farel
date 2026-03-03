@@ -1,0 +1,2 @@
+* a00de20 feat: versi 1
+* 85d3a15 feat: inisiasi github
