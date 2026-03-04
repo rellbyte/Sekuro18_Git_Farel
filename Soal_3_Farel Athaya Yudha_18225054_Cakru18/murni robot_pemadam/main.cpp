@@ -2,18 +2,19 @@
 
 using namespace std;
 
+// variabel
 class RobotPemadam {
 private:
-    int jarak;        // data sensor
-    string status;    // status pergerakan
+    int jarak;       
+    string status;  
 
 public:
-    // mengisi variabel jarak
+    
     void inputSensor(int nilai) {
         jarak = nilai;
     }
 
-    // memproses logika berdasarkan jarak
+    // percabangan
     void prosesLogika() {
         if (jarak > 20) {
             status = "Maju Mencari Api";
@@ -24,17 +25,21 @@ public:
         }
     }
 
-    // mencetak status ke layar
+    // output
     void cetakStatus() const {
         cout << "[Sensor: " << jarak << " cm] -> Action: " << status << endl;
     }
 };
 
+
 int main() {
+    // variabel
     RobotPemadam robot;
     int input;
 
     cout << "Program Robot Pemadam - masukkan angka sensor (67 untuk keluar)" << endl;
+
+    // percabangan
     while (true) {
         cout << "Masukkan jarak sensor: ";
         if (!(cin >> input)) {
@@ -55,3 +60,4 @@ int main() {
 
     return 0;
 }
+
